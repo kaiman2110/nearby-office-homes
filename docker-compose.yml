@@ -1,0 +1,16 @@
+services:
+  nuxt_app:
+    build: ./frontend
+    volumes:
+      - ./frontend:/frontend:cached 
+      - node_modules:/frontend/node_modules
+    ports:
+      - "3000:3000"
+    tty: true
+    environment:
+      - HOST=0.0.0.0
+      - port=3000
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "yarn dev"
+volumes:
+  node_modules:
