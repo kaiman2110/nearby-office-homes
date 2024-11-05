@@ -1,6 +1,7 @@
+<script setup lang="ts">
+const hello = 'こんにちは';
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <h1>{{ hello }}</h1>
 </template>
